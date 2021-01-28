@@ -1,5 +1,7 @@
 import express from 'express';
 import Responses from '../helper/responses';
+import validate from '../helper/validator';
+import Controller from '../controller/index';
 const router = express.Router();
 const basePayload = {
   name: "Adeyemi Kayode",
@@ -9,7 +11,6 @@ const basePayload = {
   twitter: "@karosi12"
 }
 router.get('/', (req, res) => res.status(200).send(Responses.success("My Rule-Validation API", basePayload)));
-router.post('/validate-rule')
-// POST "/validate-rule"
+router.post('/validate-rule', validate.validateRuleJoi, Controller.validateRule)
 
 export default router;

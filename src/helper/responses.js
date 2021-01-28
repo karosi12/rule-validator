@@ -1,11 +1,19 @@
 const responses = {
   success: (message, data) => {
     const successMessage = {
-      success: "success",
       message,
+      status: "success",
       data,
     };
     return successMessage;
+  },
+  error: (message) => {
+    const errorMessage = {
+      message,
+      status: "error",
+      data: null,
+    }
+    return errorMessage;
   }
 };
 export default responses;
