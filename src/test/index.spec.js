@@ -22,4 +22,25 @@ describe('My Rule-Validation API', () => {
       throw new Error(error);
     }
   });
+  it('#Validate-rule', async () => {
+    try {
+      const payload = {
+        "rule": { 
+          "field": "missions.count",
+          "condition": "gte",
+          "condition_value": 30
+        },
+        "data": {
+          "missions": {count: 0, p: "sdsd"}
+        }
+    }
+      const res = await request(app).post('/validate-rule')
+      .set('Accept', 'application/json')
+      .send(payload);
+      console.log(res.body);
+      // .expect(200);
+    } catch (error) {
+      throw new Error(error);
+    }
+  })
 });
