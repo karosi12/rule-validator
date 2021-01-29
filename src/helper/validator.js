@@ -22,9 +22,9 @@ const validateRuleSchema = Joi.object().keys({
   rule: Joi.object().keys({
     field: Joi.string().required(),
     condition: Joi.string().required(),
-    condition_value: Joi.number().required(),
+    condition_value: Joi.any().required(),
   }).required(),
-  data: Joi.object().required()
+  data: Joi.any().required()
 });
 
 export default { validateRuleJoi };

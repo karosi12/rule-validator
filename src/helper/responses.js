@@ -7,11 +7,11 @@ const responses = {
     };
     return successMessage;
   },
-  error: (message) => {
+  error: (message, data = null) => {
     const errorMessage = {
       message,
       status: "error",
-      data: null,
+      data,
     }
     return errorMessage;
   }
