@@ -8,7 +8,7 @@ const validateRule =  async (req, res) => {
     const {rule, data} = req.body;
     const dataKeys = Object.keys(data);
     const check = rule.field.split('.');
-    const errorMsg =  `field ${check[0]} is missing from data`;
+    const errorMsg =  `field ${check[0]} is missing from data.`;
     if(!dataKeys.includes(check[0])) return res.status(400).send(Response.error(errorMsg));
     if(check.length > 1) {
       const schema = Joi.object().keys({
