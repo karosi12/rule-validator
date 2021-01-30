@@ -18,7 +18,7 @@ An API service to validate request.body data
 
 # Features
 
-- A service to validate if data sent to the server is corrent
+- A service to validate if data sent to the server is correct
 
 ## API Endpoints
 
