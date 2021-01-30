@@ -20,6 +20,9 @@ An API service to validate request.body data
 
 - A service to validate if data sent to the server is correct
 
+# Baseuri
+https://rule-validator1.herokuapp.com/
+
 ## API Endpoints
 
 | Endpoint                | Functionality            |
